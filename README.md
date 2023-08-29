@@ -1,7 +1,73 @@
-# Vue 3 + Vite
+# Front-End Engineering Internship Test: Automotive Commerce App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
+### Goal
+Build a simple front-end application that lists car models available for sale, allowing users to
+search for specific models, and view details of each model.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Tech Stack
+● HTML
+
+● CSS
+
+● JavaScript
+
+● Any modern JS framework (Vue.js preferred)
+
+● Tailwind CSS (optional but preferred)
+
+### Features
+1. A List: Display a list of car models with basic details like make, model, price.
+
+2. A Search Bar: Enable users to search for cars by make or model.
+
+3. A Detail Page: Clicking on a car should open a detail page with more information like
+description, features, mileage.
+
+### Dataset
+
+Use the following GIST as your dataset URL containing 20 entries for car models. The
+dataset is in JSON format, each entry having at least id, make, model, price,
+description, features, and mileage.
+
+### Evaluation Criteria
+
+1. Familiarity with HTML, CSS, and JavaScript: How does the candidate uses these
+core technologies.
+
+2. Code Readability: Is the code well-commented, and are variables/functions named
+appropriately?
+
+3. Structure and Project Organization: Is the code organized into appropriate files,
+folders, and modules?
+
+4. API Integration Handling: Even though the data is mocked, how well is the data
+fetching and state management handled?
+
+5. Modern JS Frameworks: Usage of component-based architecture, reactivity,
+routing, etc.
+
+6. Unit Testing: Are key functionalities covered by unit tests?
+
+7. Git Source Control: Frequent commits with meaningful messages.
+
+### Bonus Points
+● Using TypeScript
+
+● Using Vue.js
+
+● Using Tailwind CSS
+
+### Instructions for the Candidate
+1. Create a public git repository.
+
+2. Create a new branch named development.
+
+3. Commit frequently with meaningful messages.
+
+4. Write Unit Tests for your components.
+
+5. Use the provided Gist for mocked data.
+
+6. Complete the application and create a Pull Request from development to main,
+merging into the main branch in the end.
