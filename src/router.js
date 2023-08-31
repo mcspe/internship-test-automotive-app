@@ -14,7 +14,7 @@ const router = createRouter({
     {
       path: '/detail/:id',
       name: 'detail',
-      component: AppDetail
+      component: AppDetail,
     }
   ]
 });

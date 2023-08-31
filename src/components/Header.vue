@@ -1,5 +1,4 @@
 <script setup>
-  // import { router } from '../router';
   import SearchBar from './SearchBar.vue'
 </script>
 
