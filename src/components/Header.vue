@@ -4,10 +4,10 @@
 </script>
 
 <template>
-  <header class="container mx-auto py-4 flex justify-center md:justify-between items-center">
+  <header class="container mx-auto py-4 flex flex-col max-md:gap-5 md:flex-row justify-center md:justify-between items-center">
     <router-link :to="{name: 'home'}" class="cursor-pointer">
       <img src="/logo.png" alt="LOGO" class="object-cover h-14">
     </router-link>
-    <SearchBar class="hidden md:flex"/>
+    <SearchBar />
   </header>
 </template>

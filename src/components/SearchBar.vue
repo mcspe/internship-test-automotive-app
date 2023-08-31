@@ -1,5 +1,5 @@
 <template>
-  <div class="items-center max-sm:flex-col">
+  <div class="flex flex-col sm:flex-row items-center">
     <div class="relative">
       <input class="rounded-3xl py-2 pl-4 pr-10 w-80 bg-grey text-red placeholder:text-red border border-red focus:outline-none" type="text" placeholder="Type to search" name="searchBar">
       <label for="searchBar" class="absolute top-1/2 transform -translate-y-1/2 right-4 text-red"><i class="fa-solid fa-magnifying-glass text-xl"></i></label>

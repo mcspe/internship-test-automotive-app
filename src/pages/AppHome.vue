@@ -4,9 +4,9 @@
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <SearchBar class="flex md:hidden" />
+  <div class="container mx-auto my-5">
     <div>
+      <h2 class="text-center text-3xl font-bold">Available Cars</h2>
       <ul v-if="store.isLoaded">
         <li v-for="car in store.apiResults" :key="car.id">
           <router-link :to="{name: 'detail', params:{ id: car.id }}">
