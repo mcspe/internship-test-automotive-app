@@ -1,8 +1,10 @@
 <script setup>
   import { store } from "../store/store";
   import { useRoute } from 'vue-router';
+  // INITIALIZE USE ROUTE TO GET ID PARAMETER PASSED ON ROUTER LINK OBTAIN CAR DETAIL
   const route = useRoute();
   const car = store.carDetail = store.apiResults.filter(item => item.id == route.params.id)[0];
+  // FORMAT PRICE FUNCTION, RECEIVE PRICE VALUE TO FORMAT IT USING LOCAL AND CURRENCY SETTINGS
   const formatPrice = price => {
     const euro = Intl.NumberFormat('it-IT', {
       style: 'currency',
