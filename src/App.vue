@@ -1,30 +1,30 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+  import axios from 'axios';
+  import { onMounted } from 'vue';
+  import { store } from './store/store';
+  import Header from './components/Header.vue';
+
+  // INITIALIZE APIURL CONST WITH PROVIDED URL
+  const apiUrl = 'https://gist.githubusercontent.com/joaofs/6a4eb62499572a29485ac5924a0c9e64/raw/97ac2191e65fb6d84f6f336dc8867efbc97410a3/cars.json';
+
+  onMounted(()=>{
+    // ON MUNUTED GET RESULTS THROUGH API CALL USING AXIOS
+    axios.get(apiUrl)
+    .then(result => {
+      store.apiResults = result.data;
+      store.isError = false;
+    })
+    // HERE ERRORS CAN BE HANDLED ACCORDING TO ERROR STATUS RECEIVED
+    .catch(error => {
+      console.log(error);
+      store.isError = true;
+    });
+  })
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <!-- DISPLAY HEADER AS PART OF GENERAL LAYOUT -->
+  <Header />
+  <!-- DISPLAY DIFFERENT PAGES ACCORDING TO ROUTER SETTINGS -->
+  <router-view></router-view>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
